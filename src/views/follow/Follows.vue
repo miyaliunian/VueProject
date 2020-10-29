@@ -1,5 +1,5 @@
 <template>
-  <div>关注</div>
+  <div class="follows">关注</div>
 </template>
 
 <script>
@@ -8,6 +8,10 @@ export default {
 };
 </script>
 
-<style scoped>
-
+<style lang="less" scoped>
+  .follows {
+    color: #fff;
+    height: 100vh;
+    width: 100vw;
+  }
 </style>

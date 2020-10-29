@@ -7,7 +7,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: 'index',
+    redirect: '/index/recommend/reVidelList', // app打开之后 默认跳转到首页的推荐标签栏
+  },
+  {
+    path: '/index',
+    redirect: '/index/recommend/reVidelList', // app打开之后 默认跳转到首页的推荐标签栏
   },
   {
     path: '/',
@@ -20,9 +24,28 @@ const routes = [
         component: () => import(/* webpackChunkName: "index" */ '../views/index/Index.vue'),
         children: [
           {
-            path: '/index',
-            name: 'index',
-            component: () => import(/* webpackChunkName: "videoList" */ '../components/index/VideoList.vue'),
+            path: 'follows', // 关注
+            name: 'follows',
+            component: () => import(/* webpackChunkName: "Follows" */ '../views/follow/Follows.vue'),
+            children: [
+              {
+                path: 'reVidelList',
+                name: 'reVidelList',
+                component: () => import(/* webpackChunkName: "videoList" */ '../components/index/VideoList.vue'),
+              },
+            ],
+          },
+          {
+            path: 'recommend', // 推荐
+            name: 'recommend',
+            component: () => import(/* webpackChunkName: "Recommend" */ '../views/recommend/Recommend.vue'),
+            children: [
+              {
+                path: 'reVidelList',
+                name: 'reVidelList',
+                component: () => import(/* webpackChunkName: "videoList" */ '../components/index/VideoList.vue'),
+              },
+            ],
           },
         ],
       },

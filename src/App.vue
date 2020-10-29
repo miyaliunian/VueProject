@@ -7,6 +7,7 @@
 <style lang="less">
   #app {
     height: 100%;
+    background-color: #000;
     p {
       margin-top: 5px;
       margin-bottom: 5px;

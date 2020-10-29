@@ -37,7 +37,6 @@ export default {
   },
   components: { FriendsTopbar },
   mounted() {
-    console.log('friend');
   },
 };
 </script>
