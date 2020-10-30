@@ -1,7 +1,7 @@
 <template>
-    <div class="item" @click="itemClick">
-        <span :class="{active :isActive}">{{title}}</span>
-    </div>
+    <router-link :to="navPath" tag='div' class="item" @click="itemClick">
+        <span  :class="{active :isActive}">{{title}}</span>
+    </router-link>
 </template>
 <script>
 export default {
@@ -11,18 +11,19 @@ export default {
       type: String,
       default: '',
     },
+    navPath: {
+      type: String,
+      require: true,
+    },
   },
-  data() {
-    return {
-      isActive: false,
-    };
-  },
-  computed: {
 
+  computed: {
+    isActive() {
+      return this.$route.path === this.navPath;
+    },
   },
   methods: {
     itemClick() {
-      this.isActive = !this.isActive;
     },
   },
 };

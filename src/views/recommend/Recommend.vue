@@ -33,7 +33,8 @@ export default {
     };
   },
   mounted() {
-    console.log(this.$route);
+    console.log('推荐');
+    this.$router.push({ path: 'reVidelList' });
   },
 };
 </script>

@@ -7,11 +7,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: '/',
-    redirect: '/index/recommend/reVidelList', // app打开之后 默认跳转到首页的推荐标签栏
+    redirect: '/index/recommend/', // app打开之后 默认跳转到首页的推荐标签栏
   },
   {
     path: '/index',
-    redirect: '/index/recommend/reVidelList', // app打开之后 默认跳转到首页的推荐标签栏
+    redirect: '/index/recommend/', // app打开之后 默认跳转到首页的推荐标签栏
   },
   {
     path: '/',
@@ -31,7 +31,7 @@ const routes = [
               {
                 path: 'reVidelList',
                 name: 'reVidelList',
-                component: () => import(/* webpackChunkName: "videoList" */ '../components/index/VideoList.vue'),
+                component: () => import(/* webpackChunkName: "reVidelList" */ '../components/index/VideoList.vue'),
               },
             ],
           },
@@ -43,7 +43,7 @@ const routes = [
               {
                 path: 'reVidelList',
                 name: 'reVidelList',
-                component: () => import(/* webpackChunkName: "videoList" */ '../components/index/VideoList.vue'),
+                component: () => import(/* webpackChunkName: "reVidelList" */ '../components/index/VideoList.vue'),
               },
             ],
           },

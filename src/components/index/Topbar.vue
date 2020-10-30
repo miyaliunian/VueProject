@@ -4,8 +4,8 @@
         <span class="iconfont icon-live"></span>
       </div>
       <div class="center">
-        <TopBarItem title="关注" index='0'></TopBarItem>
-        <TopBarItem title="推荐" index='1'></TopBarItem>
+        <TopBarItem title="关注" nav-path="/index/follows/reVidelList"></TopBarItem>
+        <TopBarItem title="推荐" nav-path="/index/recommend/reVidelList"></TopBarItem>
       </div>
       <div class="right" @click="toSearch">
         <span class="iconfont icon-sousuo"></span>
