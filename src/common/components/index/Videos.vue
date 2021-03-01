@@ -42,7 +42,7 @@ export default {
     videoPlayer,
   },
   created() {
-    this.autoPlayAction();
+    // this.autoPlayAction();
   },
   methods: {
     // 控制视频的播放

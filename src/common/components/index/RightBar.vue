@@ -2,7 +2,7 @@
   <div class="right-bar">
     <div class="rightbar-item">
       <div class="avatar-border">
-        <img src="../../assets/img/avatar.png" style="width: 40px;height: 40px; border-radius: 50%"
+        <img src="../../../assets/img/avatar.png" style="width: 40px;height: 40px; border-radius: 50%"
              alt="">
         <span class="iconfont icon-jia"
               style="color:#FE2C5A;position: absolute;left: 15px;bottom: -12px;font-size: 20px"></span>
@@ -22,7 +22,7 @@
     </div>
     <div class="rightbar-item">
       <div class="right-music">
-        <img src="../../assets/img/music_avatar.png"
+        <img src="../../../assets/img/music_avatar.png"
              style="width: 30px;height: 30px;border-radius: 50%">
       </div>
     </div>

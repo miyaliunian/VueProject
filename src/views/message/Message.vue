@@ -110,7 +110,7 @@
 </template>
 
 <script>
-import Header from '../../components/header/Header';
+import Header from '../../common/components/header/Header';
 
 export default {
   name: 'Message',

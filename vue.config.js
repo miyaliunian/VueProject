@@ -42,12 +42,14 @@ module.exports = {
       alias: {
         '@': resolve('src'),
         'assets': resolve('src/assets'),
+        'common': resolve('src/common'),
+        'components': resolve('src/common/components'),
+        'styles': resolve('src/common/styles'),
         'store': resolve('src/store'),
         'views': resolve('src/views'),
-        'api': resolve('src/api'),
-        'components': resolve('src/components'),
+        'request': resolve('src/request'),
         'utils': resolve('src/utils'),
-        'styles': resolve('src/styles'),
+
       }
     }
   },
@@ -63,8 +65,8 @@ function addStyleResource(rule) {
     .loader('style-resources-loader')
     .options({
       patterns: [
-        resolve('src/styles/variables.less'),
-        resolve('src/styles/mixin.less'),
+        resolve('src/common/styles/variables.less'),
+        resolve('src/common/styles/mixin.less'),
       ],
     })
 }

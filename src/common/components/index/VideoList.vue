@@ -24,7 +24,7 @@
           <div class="comment-body">
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -40,7 +40,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>
@@ -56,7 +56,7 @@
             </div>
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -72,7 +72,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>
@@ -88,7 +88,7 @@
             </div>
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -104,7 +104,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>
@@ -120,7 +120,7 @@
             </div>
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -136,7 +136,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>
@@ -152,7 +152,7 @@
             </div>
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -168,7 +168,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>
@@ -184,7 +184,7 @@
             </div>
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -200,7 +200,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>
@@ -216,7 +216,7 @@
             </div>
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -232,7 +232,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>
@@ -248,7 +248,7 @@
             </div>
             <div class="comment-box">
               <div class="comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">前端切图仔</p>
@@ -264,7 +264,7 @@
                 </div>
               </div>
               <div class="sub-comment-item">
-                <img class="user-pic" src="../../assets/img/avatar.png" alt="">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
                 <div class="item-info">
                   <div class="replay">
                     <p class="name">啦啦啦</p>

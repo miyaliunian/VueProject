@@ -31,7 +31,7 @@ const routes = [
               {
                 path: 'reVidelList',
                 name: 'reVidelList',
-                component: () => import(/* webpackChunkName: "reVidelList" */ '../components/index/VideoList.vue'),
+                component: () => import(/* webpackChunkName: "reVidelList" */ '../common/components/index/VideoList.vue'),
               },
             ],
           },
@@ -43,7 +43,7 @@ const routes = [
               {
                 path: 'reVidelList',
                 name: 'reVidelList',
-                component: () => import(/* webpackChunkName: "reVidelList" */ '../components/index/VideoList.vue'),
+                component: () => import(/* webpackChunkName: "reVidelList" */ '../common/components/index/VideoList.vue'),
               },
             ],
           },
@@ -57,7 +57,7 @@ const routes = [
           {
             path: '/friends',
             name: 'friends',
-            component: () => import(/* webpackChunkName: "videoList" */ '../components/index/VideoList.vue'),
+            component: () => import(/* webpackChunkName: "videoList" */ '../common/components/index/VideoList.vue'),
           },
         ],
       },

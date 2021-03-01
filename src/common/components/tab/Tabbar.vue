@@ -3,7 +3,7 @@
   <tab tab-title="首页" nav-path="/index"></tab>
   <tab tab-title="朋友" nav-path="/friends"></tab>
     <tab nav-path="/publish">
-      <img class="dy-btn" alt="" src="../../assets/img/dy-btn.png">
+      <img class="dy-btn" alt="" src="../../../assets/img/dy-btn.png">
     </tab>
   <tab tab-title="消息" nav-path="/msg"></tab>
   <tab tab-title="我的" nav-path="/me"></tab>

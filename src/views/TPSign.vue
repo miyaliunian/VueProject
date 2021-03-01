@@ -90,7 +90,7 @@ export default {
         this.btnBg = false;
       } else {
         console.log('请求接口');
-        this.disabled = false
+        this.disabled = false;
         this.btnBg = true;
       }
     },

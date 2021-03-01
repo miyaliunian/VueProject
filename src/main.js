@@ -3,9 +3,10 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import 'lib-flexible/flexible';
-import 'styles/main.less';
+import 'common/styles/main.less';
 import 'normalize.css/normalize.css';
 import VueSwiper from 'vue-awesome-swiper';
+import { Swipe, SwipeItem } from 'vant';
 import 'swiper/css/swiper.css';
 
 import VueVideoPlayer from 'vue-video-player'
@@ -15,6 +16,9 @@ import { Tabbar, TabbarItem } from 'vant';
 
 
 Vue.use(VueSwiper)
+Vue.use(Swipe);
+Vue.use(SwipeItem);
+
 Vue.use(VueVideoPlayer)
 
 Vue.config.productionTip = false;
