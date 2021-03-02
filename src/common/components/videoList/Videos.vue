@@ -12,7 +12,7 @@
 
 export default {
   name: 'Videos',
-  props: ['video'],
+  props: ['video', 'index'], //  video 是数据 index标识自动播放第一个视频
   data() {
     return {
       playerOptions: {
@@ -31,16 +31,30 @@ export default {
         notSupportedMessage: '此视频暂无法播放，请稍后再试', // 允许覆盖Video.js无法播放媒体源时显示的默认信息。
         controlBar: false,
       },
-      playing: true,
+      playing: true, // 用于判断 当前视频是否为播放状态
       playBtn: '',
     };
   },
-
-  components: {
-  },
   created() {
+    this.autoPlayAction();
   },
   methods: {
+    playOrStop() {
+      if (this.playing) {
+        this.$refs.videoPlayer.player.pause(); // 如果视频处于播放状态 则点击时 暂停此视频的播放
+        this.playing = false; // 设置播放标识为未播放
+      } else {
+        this.$refs.videoPlayer.player.play(); // 如果视频处于暂停状态 则点击时 继续视频的播放
+        this.playing = true; // 设置播放标识为正在播放
+      }
+    },
+
+    //  自动播放第一个视频
+    autoPlayAction() {
+      if (this.index === 0) {
+        this.playerOptions.autoplay = true;
+      }
+    },
   },
 
 };

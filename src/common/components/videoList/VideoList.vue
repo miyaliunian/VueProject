@@ -3,7 +3,8 @@
     <swiper :options="swiperOptions">
       <swiper-slide v-for="(item, index) in dataList" :key="index">
         <div>
-          <Videos :video="item"></Videos>
+          <!--  当你打开抖音APP 时 它首页的视频是自动播放的 我们不能直接修改 vue-video-player上的options->autoplay 因为autoplay 为true的话 则所有的视频都会自动播放，我们只需要让数组中的第一个播放就行了 所以我们传递数组的所以给video组件 在video组件内判断 如果index为0的话则自动播放 -->
+          <Videos ref="videos" :video="item" :index="index"></Videos>
         </div>
         <div class="info_wrap">
           <info-bar></info-bar>
@@ -43,6 +44,19 @@ export default {
         height: window.innerHeight, // 因为抖音视频的高度是占满整个屏幕的高度
         resistanceRatio: 0,
         observeParents: true,
+        on: { //  tap 方法是swiper组件提供的点击方法
+          tap: (e) => {
+            this.playAction(this.page - 1); //
+          },
+          slidePrevTransitionStart: () => { // 上滑 当屏幕向上滑动时
+            if (this.page > 1) {
+              this.page -= 1;
+            }
+          },
+          slideNextTransitionStart: () => { // 下滑动 当屏幕向下滑动时
+            this.page += 1;
+          },
+        },
       },
       dataList: [
         {
@@ -62,11 +76,15 @@ export default {
           url: 'http://video.jishiyoo.com/161b9562c780479c95bbdec1a9fbebcc/8d63913b46634b069e13188b03073c09-d25c062412ee3c4a0758b1c48fc8c642-ld.mp4',
         },
       ],
-      page: 1, // 标识翻页
+      page: 1, // 用于标识翻页
     };
   },
 
-  methods: {},
+  methods: {
+    playAction(index) { // 入参的作用是 需要知道 当前屏幕上显示的视频是第几个视频
+      this.$refs.videos[index].playOrStop(); // 调用video组件你的playOrStop 方法
+    },
+  },
 
 };
 </script>
