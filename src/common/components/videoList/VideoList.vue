@@ -5,8 +5,11 @@
         <div>
           <Videos :video="item"></Videos>
         </div>
-        <div class="info-wrap">
+        <div class="info_wrap">
           <info-bar></info-bar>
+        </div>
+        <div class="rightbar_wrap">
+           <right-bar></right-bar>
         </div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
@@ -17,10 +20,12 @@
 <script>
 import Videos from './Videos';
 import InfoBar from '../index/InfoBar';
+import RightBar from '../index/RightBar';
 
 export default {
   name: 'VideoList',
   components: {
+    RightBar,
     InfoBar,
     Videos,
   },
@@ -82,7 +87,7 @@ export default {
       }
     }
 
-    .info-wrap {
+    .info_wrap {
       position: absolute;
       left: 0;
       bottom: 55px;
@@ -92,7 +97,7 @@ export default {
       position: absolute;
       box-sizing: border-box;
       right: 0;
-      bottom: 0px;
+      bottom: 30px;
       padding-top: 10px;
     }
 
