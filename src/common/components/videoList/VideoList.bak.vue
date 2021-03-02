@@ -292,8 +292,8 @@
 
 <script>
 import Videos from './Videos';
-import InfoBar from './InfoBar';
-import RightBar from './RightBar';
+import InfoBar from '../index/InfoBar';
+import RightBar from '../index/RightBar';
 
 export default {
   name: 'VideoList',
