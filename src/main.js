@@ -12,6 +12,7 @@ import 'swiper/css/swiper.css';
 // vue 视频播放组件
 import VueVideoPlayer from 'vue-video-player'
 import 'video.js/dist/video-js.css';
+import 'vue-video-player/src/custom-theme.css'
 
 
 Vue.use(VueSwiper)

@@ -51,10 +51,12 @@ export default {
           slidePrevTransitionStart: () => { // 上滑 当屏幕向上滑动时
             if (this.page > 1) {
               this.page -= 1;
+              this.preVideo(this.page - 1);
             }
           },
           slideNextTransitionStart: () => { // 下滑动 当屏幕向下滑动时
             this.page += 1;
+            this.nextVideo(this.page - 1);
           },
         },
       },
@@ -83,6 +85,17 @@ export default {
   methods: {
     playAction(index) { // 入参的作用是 需要知道 当前屏幕上显示的视频是第几个视频
       this.$refs.videos[index].playOrStop(); // 调用video组件你的playOrStop 方法
+    },
+    // 向前
+    preVideo(index) {
+      this.$refs.videos[index].play();
+      this.$refs.videos[index + 1].stop();
+    },
+
+    // 向后
+    nextVideo(index) {
+      this.$refs.videos[index].play();
+      this.$refs.videos[index - 1].stop();
     },
   },
 

@@ -17,7 +17,7 @@ export default {
     return {
       playerOptions: {
         autoplay: false, // 如果true,浏览器准备好时开始回放。
-        muted: true, // 默认情况下将会消除任何音频。
+        muted: false, // 默认情况下将会消除任何音频。
         loop: true, // 导致视频一结束就重新开始。
         preload: 'auto',
         fluid: true, // 当true时，Video.js player将拥有流体大小。换句话说，它将按比例缩放以适应其容器。
@@ -55,6 +55,17 @@ export default {
         this.playerOptions.autoplay = true;
       }
     },
+    // 播放事件
+    play() {
+      this.$refs.videoPlayer.player.load();
+      this.$refs.videoPlayer.player.play();
+      this.playing = true;
+    },
+    // 暂停事件
+    stop() {
+      this.$refs.videoPlayer.player.pause();
+      this.playing = false;
+    },
   },
 
 };
@@ -63,17 +74,13 @@ export default {
 <style lang="less">
   .videos {
     position: relative;
-
     /deep/ .vjs-big-play-button {
       position: absolute;
       width: 80px;
       height: 80px;
       border: none;
-      background-color: transparent;
+      background-color: transparent !important;
       content: none;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
       .vjs-icon-placeholder {
         font-size: 100px;
         color: rgba(255, 255, 255, 0.7);
