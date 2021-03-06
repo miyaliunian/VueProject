@@ -10,15 +10,15 @@
     </div>
     <div class="item-icon" @click.stop="toggleLike($event)">
       <span class="iconfont icon-xinaixin-fuben" :class="{activity: isLike }"  ></span>
-      <p>95.9w</p>
+      <p>{{item.perLikes}}</p>
     </div>
     <div class="item-icon"  @click.stop="showCom($event)">
       <span class="iconfont icon-pinglun"></span>
-      <p>285</p>
+      <p>{{item.perComments}}</p>
     </div>
     <div class="item-icon">
       <span class="iconfont icon-zhuanfa"></span>
-      <p>3027</p>
+      <p>{{item.perForward}}</p>
     </div>
     <div class="rightbar-item">
       <div class="right-music">
@@ -32,6 +32,14 @@
 <script>
 export default {
   name: 'RightBar',
+  props: {
+    item: { // 父组件通过props将数据传递到子组件
+      type: Object,
+      default() { // 默认为空对象
+        return {};
+      },
+    },
+  },
   data() {
     return {
       isLike: false,
