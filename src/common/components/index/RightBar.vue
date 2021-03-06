@@ -8,11 +8,11 @@
               style="color:#FE2C5A;position: absolute;left: 15px;bottom: -12px;font-size: 20px"></span>
       </div>
     </div>
-    <div class="item-icon">
-      <span class="iconfont icon-xinaixin-fuben" :class="{activity: isLike }"  @click.stop="toggleLike($event)"></span>
+    <div class="item-icon" @click.stop="toggleLike($event)">
+      <span class="iconfont icon-xinaixin-fuben" :class="{activity: isLike }"  ></span>
       <p>95.9w</p>
     </div>
-    <div class="item-icon" >
+    <div class="item-icon"  @click.stop="showCom($event)">
       <span class="iconfont icon-pinglun"></span>
       <p>285</p>
     </div>
@@ -41,6 +41,10 @@ export default {
     toggleLike(e) {
       e.preventDefault(); // 阻止默认事件
       this.isLike = !this.isLike;
+    },
+    showCom(e) {
+      e.preventDefault();
+      this.$emit('changeCom', this.showComment);
     },
   },
 };

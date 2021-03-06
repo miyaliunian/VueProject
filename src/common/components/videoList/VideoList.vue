@@ -3,18 +3,68 @@
     <swiper :options="swiperOptions">
       <swiper-slide v-for="(item, index) in dataList" :key="index">
         <div>
-          <!--  当你打开抖音APP 时 它首页的视频是自动播放的 我们不能直接修改 vue-video-player上的options->autoplay 因为autoplay 为true的话 则所有的视频都会自动播放，我们只需要让数组中的第一个播放就行了 所以我们传递数组的所以给video组件 在video组件内判断 如果index为0的话则自动播放 -->
           <Videos ref="videos" :video="item" :index="index"></Videos>
         </div>
         <div class="info_wrap">
           <info-bar></info-bar>
         </div>
         <div class="rightbar_wrap">
-           <right-bar></right-bar>
+           <right-bar @changeCom="showComOrclose"></right-bar>
         </div>
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
+    <!-- 实现评论 -->
+    <transition name="up">
+      <!-- 这个地方用到了 v-if指令  如果 showComment 则显示列表 反之则隐藏视频列表-->
+      <div class="comment-wrap" v-if="showComment">
+        <div class="comment-list">
+          <div class="comment-top">
+            <div class="number">15W条评论</div>
+            <div class="close" @click="showComOrclose"><span class="iconfont icon-guanbi" style="font-weight: bold;font-size: 13px"></span></div>
+          </div>
+          <div class="comment-body">
+            <div class="comment-box" v-for=" i in 20" :key="i">
+              <div class="comment-item">
+                <img class="user-pic" src="~assets/img/avatar.png" alt="">
+                <div class="item-info">
+                  <div class="replay">
+                    <p class="name">前端切图仔</p>
+                    <p class="replay-des">
+                      今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班今晚不要加班</p>
+                    <p class="time">03-19</p>
+                  </div>
+                  <div class="zan">
+                  <span class="iconfont icon-xinaixin-fuben" style="text-align: center">
+                    <p>10</p>
+                  </span>
+                  </div>
+                </div>
+              </div>
+              <div class="sub-comment-item">
+                <img class="user-pic" src="../../../assets/img/avatar.png" alt="">
+                <div class="item-info">
+                  <div class="replay">
+                    <p class="name">啦啦啦</p>
+                    <p class="reply-name">不加班不加班</p>
+                    <p class="time">03-19</p>
+                  </div>
+                  <div class="zan">
+                    <span class="iconfont icon-xinaixin-fuben" style="text-align: center"><p>20</p></span>
+                  </div>
+                </div>
+              </div>
+              <div class="more">展开60条回复</div>
+            </div>
+          </div>
+          <div class="reply-input">
+            <input type="text" placeholder="有爱评论，说点好听的~">
+            <span class="emoji">@</span>
+            <span class="iconfont icon-emoji"></span>
+          </div>
+        </div>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -32,7 +82,7 @@ export default {
   },
   data() {
     return {
-      showComment: false,
+      showComment: false, // 用于控制评论列表是否显示
       swiperOptions: {
         direction: 'vertical',
         grabCursor: true,
@@ -97,6 +147,10 @@ export default {
       this.$refs.videos[index].play();
       this.$refs.videos[index - 1].stop();
     },
+    // 弹出评论列表或者关闭评论列表
+    showComOrclose() {
+      this.showComment = !this.showComment;
+    },
   },
 
 };
@@ -104,18 +158,8 @@ export default {
 
 <style lang="less" scoped>
   .video-list {
-    /*height: 100%;*/
-
     /deep/ .swiper-container {
-      /*height: 100%;*/
-      /*display: flex;*/
       position: relative;
-      .swiper-slide {
-        /*height: 100%;*/
-        /*display: flex;*/
-        /*justify-content: center;*/
-        /*align-items: center;*/
-      }
     }
 
     .info_wrap {
@@ -132,6 +176,7 @@ export default {
       padding-top: 10px;
     }
 
+    /* 评论里列表弹出动画 */
     .comment-wrap {
       position: fixed;
       left: 0;
@@ -201,7 +246,9 @@ export default {
           .replay {
             width: 90%;
           }
-
+          .replay-des {
+            padding: 5px;
+          }
           .replay-des, .reply-name {
             font-size: 14px;
             line-height: 20px;
@@ -268,6 +315,15 @@ export default {
       }
 
     }
+
+  /* 评论里列表弹出动画 */
+  .up-enter-active, .up-leave-active {
+    transition: all .5s;
+  }
+  .up-enter, .up-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 1;
+    transform: translateY(100%);
+  }
   }
 
 </style>
