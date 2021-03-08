@@ -59,6 +59,7 @@
               <div class="more">展开60条回复</div>
             </div>
           </div>
+          <!-- 输入框 -->
           <div class="reply-input">
             <input type="text" placeholder="有爱评论，说点好听的~">
             <span class="emoji">@</span>
@@ -71,9 +72,11 @@
 </template>
 
 <script>
+import { post, get } from 'request/http';
 import Videos from './Videos';
 import InfoBar from '../index/InfoBar';
 import RightBar from '../index/RightBar';
+// 引入我们封装好的网络请求组件
 
 export default {
   name: 'VideoList',
@@ -113,49 +116,19 @@ export default {
         },
       },
       dataList: [
-        {
-          id: '1',
-          url: 'http://video.jishiyoo.com/3720932b9b474f51a4cf79f245325118/913d4790b8f046bfa1c9a966cd75099f-8ef4af9b34003bd0bc0261cda372521f-ld.mp4',
-          perLikes: '7008',
-          perComments: '81',
-          perForward: '391',
-          perName: '@小孟儿',
-          perDesc: '女柚子的比赛之路，报告大家，目前一路顺畅',
-          perMusicName: '@小孟儿创作的原生',
-        },
-        {
-          id: '2',
-          url: 'http://video.jishiyoo.com/1eedc49bba7b4eaebe000e3721149807/d5ab221b92c74af8976bd3c1473bfbe2-4518fe288016ee98c8783733da0e2da4-ld.mp4',
-          perLikes: '238',
-          perComments: '6',
-          perForward: '',
-          perName: '@克拉拉ClaraLee',
-          perDesc: '你进今天健身了吗',
-          perMusicName: '@克拉拉创作的原生',
-        },
-        {
-          id: '3',
-          url: 'http://video.jishiyoo.com/549ed372c9d14b029bfb0512ba879055/8e2dc540573d496cb0942273c4a4c78c-15844fe70971f715c01d57c0c6595f45-ld.mp4',
-          perLikes: '5.4w',
-          perComments: '1401',
-          perForward: '784',
-          perName: '@普通闲话',
-          perDesc: '普通百姓买房子是资产保值增值的最好方面是吗',
-          perMusicName: '@普通闲话创作的原生',
-        },
-        {
-          id: '4',
-          url: 'http://video.jishiyoo.com/161b9562c780479c95bbdec1a9fbebcc/8d63913b46634b069e13188b03073c09-d25c062412ee3c4a0758b1c48fc8c642-ld.mp4',
-          perLikes: '2640',
-          perComments: '734',
-          perForward: '43',
-          perName: '@萌宠动漫社',
-          perDesc: '这哪还是龙啊，就是一只二哈',
-          perMusicName: '@萌宠动漫社创作的原生',
-        },
+
       ],
       page: 1, // 用于标识翻页
     };
+  },
+
+  created() {
+    get('/static/data.json')
+      .then((res) => {
+        this.dataList = res.list;
+      })
+      .catch((err) => {
+      });
   },
 
   methods: {
