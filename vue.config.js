@@ -20,16 +20,19 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    // host:'0.0.0.0',
-    // hot: true,
+    host:'0.0.0.0',
+    hot: true,
     // hotOnly: false,
     // https: false,
     //代理
     proxy: {
       '/api': {
-        target: 'http://192.168.43.154:8080',
+        target: 'http://192.168.88.15:10086',
         ws: true,
-        changeOrigin: true
+        changeOrigin: true,
+        pathRewrite: {
+          "^/api": "/"
+        }
       },
 
     }

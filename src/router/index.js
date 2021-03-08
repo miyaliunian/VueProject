@@ -11,7 +11,7 @@ const routes = [
   },
   {
     path: '/index',
-    redirect: '/index/recommend/', // app打开之后 默认跳转到首页的推荐标签栏
+    redirect: '/index/recommend/',
   },
   {
     path: '/',
@@ -31,7 +31,7 @@ const routes = [
               {
                 path: 'reVidelList',
                 name: 'reVidelList',
-                component: () => import(/* webpackChunkName: "reVidelList" */ '../common/components/index/VideoList.vue'),
+                component: () => import(/* webpackChunkName: "reVidelList" */ '../common/components/videoList/VideoList.vue'),
               },
             ],
           },
@@ -43,7 +43,7 @@ const routes = [
               {
                 path: 'reVidelList',
                 name: 'reVidelList',
-                component: () => import(/* webpackChunkName: "reVidelList" */ '../common/components/index/VideoList.vue'),
+                component: () => import(/* webpackChunkName: "reVidelList" */ '../common/components/videoList/VideoList.vue'),
               },
             ],
           },
@@ -57,7 +57,7 @@ const routes = [
           {
             path: '/friends',
             name: 'friends',
-            component: () => import(/* webpackChunkName: "videoList" */ '../common/components/index/VideoList.vue'),
+            component: () => import(/* webpackChunkName: "videoList" */ '../common/components/videoList/VideoList.vue'),
           },
         ],
       },
@@ -99,6 +99,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "publish" */ '../views/publish/Publish.vue'),
   },
 ];
+
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location, onResolve, onReject) {
+  if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject);
+  return originalPush.call(this, location).catch((err) => err);
+};
 
 const router = new VueRouter({
   mode: 'history',
