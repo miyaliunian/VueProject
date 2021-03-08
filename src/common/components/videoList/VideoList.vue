@@ -156,6 +156,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+  @import "../../styles/common.less";
   .video-list {
     /deep/ .swiper-container {
       position: relative;
@@ -314,15 +315,6 @@ export default {
       }
 
     }
-
-  /* 评论里列表弹出动画 */
-  .up-enter-active, .up-leave-active {
-    transition: all .5s;
-  }
-  .up-enter, .up-leave-to /* .fade-leave-active below version 2.1.8 */ {
-    opacity: 1;
-    transform: translateY(100%);
-  }
   }
 
 </style>
