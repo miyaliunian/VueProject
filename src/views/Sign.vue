@@ -27,7 +27,7 @@
         <button :disabled="disabled" :class="[btnBg? 'active':'']" @click="getCode">获取短信验证码</button>
       </div>
       <div class="other">
-        <router-link href="" tag="a" to="/tpsign">密码登录</router-link>
+        <router-link href="" tag="a" to="/phoneSign">密码登录</router-link>
         <span @click="show">其他方式登录</span>
       </div>
     </div>
@@ -61,7 +61,7 @@ export default {
   },
   methods: {
     getCode() {
-      this.$router.push({ path: '/code' });
+      this.$router.push({ path: '/codeSign' });
     },
     show() {
       this.showMask = true;
