@@ -2,27 +2,27 @@
   <div class="right-bar">
     <div class="rightbar-item">
       <div class="avatar-border">
-        <img src="../../../assets/img/avatar.png" style="width: 40px;height: 40px; border-radius: 50%"
+        <img src="~assets/img/avatar.png" style="width: 40px;height: 40px; border-radius: 50%"
              alt="">
         <span class="iconfont icon-jia"
               style="color:#FE2C5A;position: absolute;left: 15px;bottom: -12px;font-size: 20px"></span>
       </div>
     </div>
-    <div class="item-icon">
-      <span class="iconfont icon-xin"></span>
-      <p>95.9w</p>
+    <div class="item-icon" @click.stop="toggleLike($event)">
+      <span class="iconfont icon-xinaixin-fuben" :class="{activity: isLike }"  ></span>
+      <p>{{item.perLikes}}</p>
     </div>
-    <div class="item-icon" @click.stop="showCom($event)">
+    <div class="item-icon"  @click.stop="showCom($event)">
       <span class="iconfont icon-pinglun"></span>
-      <p>285</p>
+      <p>{{item.perComments}}</p>
     </div>
     <div class="item-icon">
       <span class="iconfont icon-zhuanfa"></span>
-      <p>3027</p>
+      <p>{{item.perForward}}</p>
     </div>
     <div class="rightbar-item">
       <div class="right-music">
-        <img src="../../../assets/img/music_avatar.png"
+        <img src="~assets/img/music_avatar.png"
              style="width: 30px;height: 30px;border-radius: 50%">
       </div>
     </div>
@@ -32,7 +32,24 @@
 <script>
 export default {
   name: 'RightBar',
+  props: {
+    item: { // 父组件通过props将数据传递到子组件
+      type: Object,
+      default() { // 默认为空对象
+        return {};
+      },
+    },
+  },
+  data() {
+    return {
+      isLike: false,
+    };
+  },
   methods: {
+    toggleLike(e) {
+      e.preventDefault(); // 阻止默认事件
+      this.isLike = !this.isLike;
+    },
     showCom(e) {
       e.preventDefault();
       this.$emit('changeCom', this.showComment);
@@ -71,6 +88,9 @@ export default {
       height: 60px;
       text-align: center;
       padding-bottom: 10px;
+      .activity {
+        color: orangered;
+      }
     }
 
     .iconfont {
