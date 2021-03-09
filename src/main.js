@@ -8,13 +8,14 @@ import 'normalize.css/normalize.css';
 //  全屏滚动组件
 import VueSwiper from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
-
+//  自定义Toast
+import Toast from 'components/toast/toast.js'
 // vue 视频播放组件
 import VueVideoPlayer from 'vue-video-player'
 import 'video.js/dist/video-js.css';
 import 'vue-video-player/src/custom-theme.css'
 
-
+Vue.prototype.$toast = Toast
 Vue.use(VueSwiper)
 Vue.use(VueVideoPlayer)
 
