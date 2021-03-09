@@ -9,13 +9,15 @@ import 'normalize.css/normalize.css';
 import VueSwiper from 'vue-awesome-swiper';
 import 'swiper/css/swiper.css';
 //  自定义Toast
+//自定义弹框
 import Toast from 'components/toast/toast.js'
+//挂载(链式)
+Vue.prototype.$toast = Toast
 // vue 视频播放组件
 import VueVideoPlayer from 'vue-video-player'
 import 'video.js/dist/video-js.css';
 import 'vue-video-player/src/custom-theme.css'
 
-Vue.prototype.$toast = Toast
 Vue.use(VueSwiper)
 Vue.use(VueVideoPlayer)
 
