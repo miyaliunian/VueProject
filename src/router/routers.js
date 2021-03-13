@@ -2,6 +2,7 @@
 import { publish } from './module/publish';
 import { home } from './module/home';
 import { sign } from './module/sign';
+import { edit } from './module/edit';
 
 export const routes = [
   {
@@ -14,5 +15,6 @@ export const routes = [
   },
   ...home,
   ...sign,
+  ...edit,
   ...publish,
 ];

@@ -60,11 +60,7 @@ export const home = [
         name: 'me',
         component: () => import(/* webpackChunkName: "me" */ 'views/me/Me.vue'),
       },
-      {
-        path: '/toast',
-        name: 'toast',
-        component: () => import(/* webpackChunkName: "me" */ 'components/toast/toast.vue'),
-      },
+
     ],
   },
 ];

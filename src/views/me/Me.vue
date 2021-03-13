@@ -9,8 +9,9 @@
       <div class="me-content">
         <div class="info">
           <img src="~assets/img/avatar.png" alt=""
-               style="height: 100px;width: 100px;border-radius: 50%;margin-right: 20px">
-          <button class="btn">编辑资料</button>
+               style="height: 100px;width: 100px;border-radius: 50%;
+               margin-right: 20px">
+          <button class="btn" @click="toEdit">编辑资料</button>
           <button class="btn">+朋友</button>
         </div>
         <div class="des">
@@ -80,6 +81,9 @@ export default {
     ...mapActions('me', ['fetchMe']),
     changeTab(index) {
       this.indexTab = index;
+    },
+    toEdit() {
+      this.$router.push({ path: '/edit' });
     },
   },
   computed: {
