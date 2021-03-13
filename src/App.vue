@@ -6,8 +6,8 @@
 
 <style lang="less">
   #app {
-    height: 100%;
-    background-color: #000;
+    height: 100vh;
+    background-color: #101821;
     p {
       margin-top: 5px;
       margin-bottom: 5px;
