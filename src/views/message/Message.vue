@@ -2,35 +2,34 @@
   <div class="message">
     <Header title="消息" has-right="true" right-txt="发起聊天 "></Header>
     <div class="msg-wrap">
-      <div>wefwefe</div>
       <div class="msg-nav">
         <div class="msg-nav-item">
           <div class="icon-box">
-            <img src="../../assets/img/fs.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
+            <img src="~/assets/img/fs.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
           </div>
           <p>粉丝</p>
         </div>
         <div class="msg-nav-item">
           <div class="icon-box">
-            <img src="../../assets/img/xh.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
+            <img src="~/assets/img/xh.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
           </div>
           <p>赞</p>
         </div>
         <div class="msg-nav-item">
           <div class="icon-box">
-            <img src="../../assets/img/wd.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
+            <img src="~assets/img/wd.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
           </div>
           <p>@我的</p>
         </div>
         <div class="msg-nav-item">
           <div class="icon-box">
-            <img src="../../assets/img/pl.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
+            <img src="~assets/img/pl.png" alt="" style="width: 50px;height: 50px;border-radius: 10px">
           </div>
           <p>评论</p>
         </div>
       </div>
       <div class="msg-me-ad">
-        <img src="../../assets/img/me_ad.png" alt="" >
+        <img src="~assets/img/me_ad.png" alt="" >
       </div>
       <div class="download">
         <div>抖音好友圈</div>
@@ -40,59 +39,7 @@
       </div>
       <div class="msg-list-box">
         <div class="msg-list">
-          <img src="../../assets/img/avatar.png" alt="">
-          <div class="user-des">
-            <div class="top">
-              <span>抖音助手</span>
-              <span>12:12</span>
-            </div>
-            <div class="bottom bottom-msg">
-              <span>抖音安全课堂</span>
-              <span class="no-see"></span>
-            </div>
-          </div>
-        </div>
-        <div class="msg-list">
-          <img src="../../assets/img/avatar.png" alt="">
-          <div class="user-des">
-            <div class="top">
-              <span>抖音助手</span>
-              <span>12:12</span>
-            </div>
-            <div class="bottom bottom-msg">
-              <span>抖音安全课堂</span>
-              <span class="no-see"></span>
-            </div>
-          </div>
-        </div>
-        <div class="msg-list">
-          <img src="../../assets/img/avatar.png" alt="">
-          <div class="user-des">
-            <div class="top">
-              <span>抖音助手</span>
-              <span>12:12</span>
-            </div>
-            <div class="bottom bottom-msg">
-              <span>抖音安全课堂</span>
-              <span class="no-see"></span>
-            </div>
-          </div>
-        </div>
-        <div class="msg-list">
-          <img src="../../assets/img/avatar.png" alt="">
-          <div class="user-des">
-            <div class="top">
-              <span>抖音助手</span>
-              <span>12:12</span>
-            </div>
-            <div class="bottom bottom-msg">
-              <span>抖音安全课堂</span>
-              <span class="no-see"></span>
-            </div>
-          </div>
-        </div>
-        <div class="msg-list">
-          <img src="../../assets/img/avatar.png" alt="">
+          <img src="~assets/img/avatar.png" alt="">
           <div class="user-des">
             <div class="top">
               <span>抖音助手</span>
@@ -110,7 +57,7 @@
 </template>
 
 <script>
-import Header from '../../common/components/header/Header';
+import Header from 'components/header/Header';
 
 export default {
   name: 'Message',
@@ -139,7 +86,6 @@ export default {
           .icon-box {
             width: 60px;
             height: 60px;
-            /*background-color: #FF4D74;*/
             border-radius: 50%;
             margin-bottom: 5px;
           }
