@@ -25,8 +25,8 @@ Vue.config.productionTip = false;
 Vue.config.devtools = true
 
 store.subscribe((mutation, state) => {
-  console.log(mutation.type);
-  console.log(mutation.payload);
+  // console.log(mutation.type);
+  // console.log(mutation.payload);
 })
 
 store.subscribeAction((action, state)=>{
