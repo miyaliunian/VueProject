@@ -1,0 +1,89 @@
+{
+    "userInfo": {
+          "name": "前端逗逗飞",
+          "sn": "201509094607",
+          "sub": "带你走进前端开发",
+          "age": "23",
+          "desc": "公众号前端逗逗飞",
+          "tag": "标签",
+          "like": "2",
+          "fans": "20000"
+
+        },
+        "vlist": {
+            "works": [{
+                "id": "001",
+                "url": "http://video.jishiyoo.com/3720932b9b474f51a4cf79f245325118/913d4790b8f046bfa1c9a966cd75099f-8ef4af9b34003bd0bc0261cda372521f-ld.mp4",
+                "icon": "/assets/img/1.png"
+            },
+            {
+              "id": "002",
+              "url": "http://video.jishiyoo.com/3720932b9b474f51a4cf79f245325118/913d4790b8f046bfa1c9a966cd75099f-8ef4af9b34003bd0bc0261cda372521f-ld.mp4",
+              "icon": "/assets/img/1.png"
+          },
+          {
+              "id": "002",
+              "url": "http://video.jishiyoo.com/3720932b9b474f51a4cf79f245325118/913d4790b8f046bfa1c9a966cd75099f-8ef4af9b34003bd0bc0261cda372521f-ld.mp4",
+              "icon": "/assets/img/1.png"
+          },
+          {
+              "id": "003",
+              "url": "http://video.jishiyoo.com/3720932b9b474f51a4cf79f245325118/913d4790b8f046bfa1c9a966cd75099f-8ef4af9b34003bd0bc0261cda372521f-ld.mp4",
+              "icon": "/assets/img/1.png"
+          }
+          ],
+            "movs": [
+              {
+                  "id": "001",
+                  "url": "http://video.jishiyoo.com/1eedc49bba7b4eaebe000e3721149807/d5ab221b92c74af8976bd3c1473bfbe2-4518fe288016ee98c8783733da0e2da4-ld.mp4",
+                  "icon": "/assets/img/2.png"
+              },
+              {
+                  "id": "002",
+                  "url": "http://video.jishiyoo.com/1eedc49bba7b4eaebe000e3721149807/d5ab221b92c74af8976bd3c1473bfbe2-4518fe288016ee98c8783733da0e2da4-ld.mp4",
+                  "icon": "/assets/img/2.png"
+              },
+              {
+                  "id": "003",
+                  "url": "http://video.jishiyoo.com/1eedc49bba7b4eaebe000e3721149807/d5ab221b92c74af8976bd3c1473bfbe2-4518fe288016ee98c8783733da0e2da4-ld.mp4",
+                  "icon": "/assets/img/2.png"
+              },                {
+                  "id": "004",
+                  "url": "http://video.jishiyoo.com/1eedc49bba7b4eaebe000e3721149807/d5ab221b92c74af8976bd3c1473bfbe2-4518fe288016ee98c8783733da0e2da4-ld.mp4",
+                  "icon": "/assets/img/2.png"
+              }
+            ],
+            "likes": [
+              {
+                  "id": "001",
+                  "url": "http://video.jishiyoo.com/549ed372c9d14b029bfb0512ba879055/8e2dc540573d496cb0942273c4a4c78c-15844fe70971f715c01d57c0c6595f45-ld.mp4",
+                  "icon": "/assets/img/3.png"
+              },
+              {
+                  "id": "002",
+                  "url": "http://video.jishiyoo.com/549ed372c9d14b029bfb0512ba879055/8e2dc540573d496cb0942273c4a4c78c-15844fe70971f715c01d57c0c6595f45-ld.mp4",
+                  "icon": "/assets/img/3.png"
+              },
+              {
+                  "id": "003",
+                  "url": "http://video.jishiyoo.com/549ed372c9d14b029bfb0512ba879055/8e2dc540573d496cb0942273c4a4c78c-15844fe70971f715c01d57c0c6595f45-ld.mp4",
+                  "icon": "/assets/img/3.png"
+              },
+              {
+                  "id": "004",
+                  "url": "http://video.jishiyoo.com/549ed372c9d14b029bfb0512ba879055/8e2dc540573d496cb0942273c4a4c78c-15844fe70971f715c01d57c0c6595f45-ld.mp4",
+                  "icon": "/assets/img/3.png"
+              },
+              {
+                  "id": "005",
+                  "url": "http://video.jishiyoo.com/549ed372c9d14b029bfb0512ba879055/8e2dc540573d496cb0942273c4a4c78c-15844fe70971f715c01d57c0c6595f45-ld.mp4",
+                  "icon": "/assets/img/3.png"
+              },
+              {
+                  "id": "006",
+                  "url": "http://video.jishiyoo.com/549ed372c9d14b029bfb0512ba879055/8e2dc540573d496cb0942273c4a4c78c-15844fe70971f715c01d57c0c6595f45-ld.mp4",
+                  "icon": "/assets/img/3.png"
+              }
+            ]
+        }
+  }

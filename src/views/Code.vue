@@ -18,15 +18,18 @@
         </div>
       </div>
       <div class="code-btn">
-        <button :disabled="disabled" :class="[btnBg? 'active':'']" class="load-btn"><div v-if="loading" class="loads"></div>登录</button>
+        <button :disabled="disabled" :class="[btnBg? 'active':'']" class="load-btn" @click="submit"><div v-if="loading" class="loads"></div>登录</button>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+// 引入vuex
+import { mapState, mapActions } from 'vuex';
+
 export default {
-  name: 'Sign',
+  name: 'Code',
   data() {
     return {
       telErea: '',
@@ -34,14 +37,19 @@ export default {
       disabled: true,
       btnBg: false,
       code: '',
-      defaultCode: '2261',
       loading: false,
     };
   },
   created() {
     this.getCode();
   },
+  computed: {
+    ...mapState({
+      defaultCode: (state) => state.sign.defaultCode,
+    }),
+  },
   methods: {
+    ...mapActions('sign', ['sign']),
     getCode() {
       this.countDown();
     },
@@ -51,7 +59,7 @@ export default {
       if (this.code === this.defaultCode) {
         this.disabled = false;
         this.btnBg = true;
-        this.loading = true;
+        // this.loading = true;
       } else {
         console.log('验证码输入错误');
       }
@@ -61,9 +69,12 @@ export default {
         // eslint-disable-next-line no-plusplus
         this.time--;
         setTimeout(this.countDown, 1000);
-        // eslint-disable-next-line no-empty
-      } else {
       }
+    },
+    // 登录按钮点击事件
+    submit() {
+      // 登录操作
+      this.sign({ code: this.code });
     },
   },
 };

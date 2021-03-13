@@ -8,25 +8,25 @@
     <div class="me-wrap">
       <div class="me-content">
         <div class="info">
-          <img src="../../assets/img/avatar.png" alt=""
+          <img src="~assets/img/avatar.png" alt=""
                style="height: 100px;width: 100px;border-radius: 50%;margin-right: 20px">
           <button class="btn">编辑资料</button>
           <button class="btn">+朋友</button>
         </div>
         <div class="des">
-          <h2>爱学习的孩子</h2>
-          <span>抖音号：xxxxxx</span>
-          <p>越努力越幸运</p>
+          <h2>{{useInfo.name}}</h2>
+          <span>抖音号：{{useInfo.sn}}</span>
+          <p>{{useInfo.sub}}</p>
         </div>
         <div class="user-tag">
-          <span>23岁</span>
-          <span>中国最富垃圾车</span>
-          <span>+添加学校等标签</span>
+          <span>{{useInfo.age}}岁</span>
+          <span>{{useInfo.desc}}</span>
+          <span>+{{useInfo.tag}}</span>
         </div>
         <div class="user-tag2">
-          <span><a>2</a>获赞</span>
+          <span><a>{{useInfo.like}}</a>获赞</span>
           <span><a>543</a>关注</span>
-          <span><a>2.0W</a>+粉丝</span>
+          <span><a>{{useInfo.fans}}W</a>+粉丝</span>
         </div>
         <div class="me-ab">
           好好学习，天天向上
@@ -40,24 +40,18 @@
         </div>
         <div class="tab-wrap">
           <div class="tab-con" v-show="indexTab === 0">
-            <div class="tab-img">
-              <img src="../../assets/img/1.jpeg">
-              <img src="../../assets/img/1.jpeg">
-              <img src="../../assets/img/1.jpeg">
+            <div class="tab-img" v-for="(i, index) in vlist.works" :key="index">
+              <img :src="i.icon" style="width:100%;height:auto" >
             </div>
           </div>
           <div class="tab-con" v-show="indexTab === 1">
-            <div class="tab-img">
-              <img src="../../assets/img/2.jpg">
-              <img src="../../assets/img/2.jpg">
-              <img src="../../assets/img/2.jpg">
+            <div class="tab-img" v-for="i in vlist.movs" :key="i.id">
+              <img :src="i.icon" style="width:100%;height:auto" >
             </div>
           </div>
           <div class="tab-con" v-show="indexTab === 2">
-            <div class="tab-img">
-              <img src="../../assets/img/3.jpg">
-              <img src="../../assets/img/3.jpg">
-              <img src="../../assets/img/3.jpg">
+            <div class="tab-img" v-for="i in vlist.likes" :key="i.id">
+              <img :src="i.icon" style="width:100%;height:auto" >
             </div>
           </div>
         </div>
@@ -67,8 +61,10 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex';
+
 export default {
-  name: 'me',
+  name: 'Me',
   data() {
     return {
       bgPic: {
@@ -81,9 +77,19 @@ export default {
     };
   },
   methods: {
+    ...mapActions('me', ['fetchMe']),
     changeTab(index) {
       this.indexTab = index;
     },
+  },
+  computed: {
+    ...mapState({
+      useInfo: (state) => state.me.useInfo,
+      vlist: (state) => state.me.vlist,
+    }),
+  },
+  created() { // 多用于请求请求数据
+    this.fetchMe();
   },
 };
 </script>
@@ -206,8 +212,18 @@ export default {
           }
         }
         .tab-wrap {
-          .tab-con img {
-            width: 30%;
+          background-color: #000;
+          .tab-con {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .tab-img {
+              width: 33%;
+              &:nth-child(3n) {
+                border-right: 0;
+              }
+            }
           }
         }
       }
