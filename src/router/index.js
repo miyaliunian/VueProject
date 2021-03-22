@@ -16,4 +16,13 @@ const router = new VueRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  const { meta: { requiresAuth } } = to;
+  if (requiresAuth) {
+    next({ path: '/sign' });
+  } else {
+    next();
+  }
+});
+
 export default router;

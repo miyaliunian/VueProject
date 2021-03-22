@@ -54,11 +54,17 @@ export const home = [
         path: '/msg',
         name: 'msg',
         component: () => import(/* webpackChunkName: "msg" */ 'views/message/Message.vue'),
+        meta: {
+          requiresAuth: true, // 此组件是否需要登录权限
+        },
       },
       {
         path: '/me',
         name: 'me',
         component: () => import(/* webpackChunkName: "me" */ 'views/me/Me.vue'),
+        meta: {
+          requiresAuth: true, // 此组件是否需要登录权限
+        },
       },
 
     ],
