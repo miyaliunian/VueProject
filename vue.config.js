@@ -11,6 +11,7 @@ function resolve(dir) {
 module.exports = {
   outputDir: process.env.NODE_ENV === 'production' ?  'dist': 'ych5' ,
   productionSourceMap: false, // 生产环境是否 生成SourceMap
++   publicPath: process.env.VUE_APP_NGINX_CONTENT,
   devServer: {
     port,
     // 启动之后 自动打开浏览器

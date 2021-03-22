@@ -12,7 +12,7 @@ VueRouter.prototype.push = function push(location, onResolve, onReject) {
 
 const router = new VueRouter({
   mode: 'history',
-  base: process.env.BASE_URL,
+  base: process.env.VUE_APP_NGINX_CONTENT,
   routes,
 });
 
