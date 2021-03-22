@@ -1,170 +1,149 @@
 {
-  "id": "1136137",
-  "name": "Travel",
+  "id": "1202989",
+  "name": "智慧医保",
   "font_family": "iconfont",
-  "css_prefix_text": "icon-",
-  "description": "",
+  "css_prefix_text": "icon",
+  "description": "H5webApp 图标仓库",
   "glyphs": [
     {
-      "icon_id": "106851",
+      "icon_id": "9828802",
+      "name": "滤镜",
+      "font_class": "ziyuan",
+      "unicode": "e61c",
+      "unicode_decimal": 58908
+    },
+    {
+      "icon_id": "15838561",
+      "name": "arrow-left-bold",
+      "font_class": "arrow-left-bold",
+      "unicode": "e685",
+      "unicode_decimal": 59013
+    },
+    {
+      "icon_id": "15838566",
+      "name": "arrow-right-bold",
+      "font_class": "arrow-right-bold",
+      "unicode": "e687",
+      "unicode_decimal": 59015
+    },
+    {
+      "icon_id": "151086",
       "name": "心",
-      "font_class": "bqxin",
-      "unicode": "e68c",
-      "unicode_decimal": 59020
+      "font_class": "xin",
+      "unicode": "e622",
+      "unicode_decimal": 58914
     },
     {
-      "icon_id": "2057047",
-      "name": "叹号",
-      "font_class": "tanhao",
-      "unicode": "e690",
-      "unicode_decimal": 59024
+      "icon_id": "18267909",
+      "name": "处方",
+      "font_class": "chufang",
+      "unicode": "e98c",
+      "unicode_decimal": 59788
     },
     {
-      "icon_id": "8591100",
-      "name": "添加联系人",
-      "font_class": "tianjialianxiren",
-      "unicode": "e6c9",
-      "unicode_decimal": 59081
+      "icon_id": "3101157",
+      "name": "对号",
+      "font_class": "duihao1",
+      "unicode": "e614",
+      "unicode_decimal": 58900
     },
     {
-      "icon_id": "276791",
-      "name": "音符",
-      "font_class": "yinfu",
-      "unicode": "e67f",
-      "unicode_decimal": 59007
+      "icon_id": "12025955",
+      "name": "对号",
+      "font_class": "duihao",
+      "unicode": "e7a3",
+      "unicode_decimal": 59299
     },
     {
-      "icon_id": "554117",
-      "name": "音符",
-      "font_class": "iconset0163",
-      "unicode": "e63e",
-      "unicode_decimal": 58942
+      "icon_id": "18267904",
+      "name": "版权",
+      "font_class": "banquan",
+      "unicode": "e98b",
+      "unicode_decimal": 59787
     },
     {
-      "icon_id": "14658036",
-      "name": "相机",
-      "font_class": "xiangji",
-      "unicode": "e694",
-      "unicode_decimal": 59028
-    },
-    {
-      "icon_id": "9223942",
+      "icon_id": "6187062",
       "name": "右箭头",
-      "font_class": "arrow-left",
-      "unicode": "e605",
-      "unicode_decimal": 58885
-    },
-    {
-      "icon_id": "10212861",
-      "name": "返 回",
-      "font_class": "back",
+      "font_class": "arrow-backimg",
       "unicode": "e604",
       "unicode_decimal": 58884
     },
     {
-      "icon_id": "8155302",
-      "name": "emoji",
-      "font_class": "emoji",
-      "unicode": "e6c1",
-      "unicode_decimal": 59073
-    },
-    {
-      "icon_id": "12755343",
-      "name": "心 爱心 - 副本",
-      "font_class": "xinaixin-fuben",
-      "unicode": "e624",
-      "unicode_decimal": 58916
-    },
-    {
-      "icon_id": "10708257",
-      "name": "关  闭",
-      "font_class": "guanbi",
-      "unicode": "e68b",
-      "unicode_decimal": 59019
-    },
-    {
-      "icon_id": "889568",
-      "name": "评论",
-      "font_class": "pinglun",
-      "unicode": "e645",
-      "unicode_decimal": 58949
-    },
-    {
-      "icon_id": "6198607",
-      "name": "心 爱心",
-      "font_class": "xin",
-      "unicode": "e600",
-      "unicode_decimal": 58880
-    },
-    {
-      "icon_id": "7545913",
-      "name": "转发",
-      "font_class": "zhuanfa",
-      "unicode": "e747",
-      "unicode_decimal": 59207
-    },
-    {
-      "icon_id": "13920222",
-      "name": "消 息",
-      "font_class": "xiaoxi21-copy",
+      "icon_id": "8304415",
+      "name": "长箭头",
+      "font_class": "changjiantou-copy-copy",
       "unicode": "e603",
       "unicode_decimal": 58883
     },
     {
-      "icon_id": "14289782",
-      "name": "评论",
-      "font_class": "pinglun1",
-      "unicode": "e635",
-      "unicode_decimal": 58933
+      "icon_id": "5849779",
+      "name": "右箭头",
+      "font_class": "iconfontyoujiantou-copy-copy-copy",
+      "unicode": "e602",
+      "unicode_decimal": 58882
     },
     {
-      "icon_id": "11316679",
-      "name": "加",
-      "font_class": "jia",
-      "unicode": "e623",
-      "unicode_decimal": 58915
+      "icon_id": "6185438",
+      "name": "无数据",
+      "font_class": "wushuju",
+      "unicode": "e648",
+      "unicode_decimal": 58952
     },
     {
-      "icon_id": "16062627",
-      "name": "抖音标识上",
-      "font_class": "douyinbiaoshishang",
-      "unicode": "e783",
-      "unicode_decimal": 59267
-    },
-    {
-      "icon_id": "7008958",
-      "name": "live",
-      "font_class": "live",
-      "unicode": "e708",
-      "unicode_decimal": 59144
-    },
-    {
-      "icon_id": "1110401",
-      "name": "爱心",
-      "font_class": "aixin",
+      "icon_id": "3213599",
+      "name": "刷新",
+      "font_class": "shuaxin-copy",
       "unicode": "e601",
       "unicode_decimal": 58881
     },
     {
-      "icon_id": "5640058",
-      "name": "搜索",
-      "font_class": "sousuo",
-      "unicode": "e627",
-      "unicode_decimal": 58919
+      "icon_id": "12861759",
+      "name": "向下箭头",
+      "font_class": "down-arrow",
+      "unicode": "e626",
+      "unicode_decimal": 58918
     },
     {
-      "icon_id": "14145075",
-      "name": "直播",
-      "font_class": "zhibo",
-      "unicode": "e73a",
-      "unicode_decimal": 59194
+      "icon_id": "11883352",
+      "name": "Icon - Keyboard Arrow - Down - Rounded",
+      "font_class": "Icon-KeyboardArrow-Down-Rounded",
+      "unicode": "e68d",
+      "unicode_decimal": 59021
     },
     {
-      "icon_id": "1966203",
-      "name": "图片",
-      "font_class": "tupian",
-      "unicode": "e602",
-      "unicode_decimal": 58882
+      "icon_id": "10574452",
+      "name": "iconfont-platform entrance",
+      "font_class": "downArrow",
+      "unicode": "e671",
+      "unicode_decimal": 58993
+    },
+    {
+      "icon_id": "3685433",
+      "name": "下箭头",
+      "font_class": "up",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "8738253",
+      "name": "返 回",
+      "font_class": "fanhui",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "5782152",
+      "name": "关 闭",
+      "font_class": "guanbi",
+      "unicode": "e652",
+      "unicode_decimal": 58962
+    },
+    {
+      "icon_id": "2676665",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
     }
   ]
 }
