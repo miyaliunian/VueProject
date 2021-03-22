@@ -4,7 +4,7 @@
     <div class="edit-wrap">
       <div class="avatar-box">
         <div class="avatar">
-          <img src="../../assets/img/avatar.png" alt=""/>
+          <img src="~assets/img/avatar.png" alt=""/>
           <span class="iconfont icon-xiangji"></span>
           <input type="file">
           <p>点击更换头像</p>

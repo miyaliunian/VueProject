@@ -1,11 +1,11 @@
 <template>
   <div class="info-bar">
-    <div class="infobar-item">逗逗飞</div>
-    <div class="infobar-item">Vue 从0到1 实战</div>
+    <div class="infobar-item">{{item.perName}}</div>
+    <div class="infobar-item">{{item.perDesc}}</div>
     <div class="infobar-item music-item">
       <span class="iconfont icon-douyinbiaoshishang"></span>
       <div class="music-name">
-        <span data-text="千岛群岛群无多">千岛群岛群无多</span>
+        <span data-text="千岛群岛群无多">{{item.perMusicName}}</span>
       </div>
     </div>
   </div>
@@ -14,6 +14,14 @@
 <script>
 export default {
   name: 'InfoBar',
+  props: {
+    item: { // 父组件通过props将数据传递到子组件
+      type: Object,
+      default() { // 默认为空对象
+        return {};
+      },
+    },
+  },
 };
 </script>
 

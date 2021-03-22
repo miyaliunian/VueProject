@@ -39,7 +39,6 @@ export default {
 
 <style lang="less" scoped>
   .top-bar {
-    /*background: #000000;*/
     z-index: 999;
     width: 100%;
     height: 50px;
@@ -60,27 +59,6 @@ export default {
       flex: 1;
       display: flex;
       justify-content: center;
-      .item {
-        flex: 1;
-        text-align: center;
-        span {
-          padding: 2px 0px;
-          text-align: center;
-          position: relative;
-        }
-        .active {
-          color: #ffffff;
-          &:after {
-            content: "";
-            height: 1px;
-            width: 30px;
-            left: 3px;
-            bottom: -2px;
-            position: absolute;
-            background: #ffffff;
-          }
-        }
-      }
     }
     .right {
       width: 20%;
