@@ -27,11 +27,11 @@
         <button :disabled="disabled" :class="[btnBg? 'active':'']" @click="getCode">获取短信验证码</button>
       </div>
       <div class="other">
-        <router-link href="" tag="a" to="/tpsign">密码登录</router-link>
+        <router-link href="" tag="a" to="/phoneSign">密码登录</router-link>
         <span @click="show">其他方式登录</span>
       </div>
     </div>
-    <!--    <transition name="up">-->
+       <transition name="up">
     <div class="mask" v-if="showMask" @click="close">
         <div class="oauth">
           <ul>
@@ -43,7 +43,7 @@
           </ul>
         </div>
     </div>
-    <!--    </transition>-->
+       </transition>
   </div>
 </template>
 
@@ -52,16 +52,16 @@ export default {
   name: 'Sign',
   data() {
     return {
-      telErea: '',
-      showMask: false,
-      disabled: true,
-      btnBg: false,
-      phone: '  ',
+      telErea: '', // 号码所属度
+      showMask: false, // 是否显示其它登录方式
+      disabled: true, // 获取短信验证码按钮是否可用
+      btnBg: false, // 用于’获取短信验证码‘按钮动态样式处理
+      phone: '  ', // v-modal input输入框 双向数据绑定
     };
   },
   methods: {
     getCode() {
-      this.$router.push({ path: '/code' });
+      this.$router.push({ path: '/codeSign' });
     },
     show() {
       this.showMask = true;
@@ -89,6 +89,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
+@import "../common/styles/common.less";
   .sign {
     padding: 30px;
     background-color: #fff;
@@ -206,5 +207,4 @@ export default {
       }
     }
   }
-
 </style>

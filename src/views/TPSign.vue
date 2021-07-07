@@ -65,7 +65,7 @@ export default {
       this.phone = e.target.value;
       const regTel = /^[1][3456789][0-9]{9}$/;
       if (!regTel.test(this.phone)) {
-        console.log('不附和正则表达式');
+        this.$toast('手机号格式不正确');
         this.btnBg = false;
         this.disabled = true;
       }
@@ -77,15 +77,25 @@ export default {
       // eslint-disable-next-line no-useless-escape
       const regTel = /^[1][3456789][0-9]{9}$/;
       if (this.phone === '') {
-        console.log('手机号不能为空');
+        this.$toast({
+          message: '手机号不能为空',
+          type: 'error',
+          duration: 20000,
+        });
         this.disabled = true;
         this.btnBg = false;
       } else if (!regTel.test(this.phone)) {
-        console.log('请填写正确的手机号');
+        this.$toast({
+          message: '请填写正确的手机号',
+          type: 'error',
+        });
         this.disabled = true;
         this.btnBg = false;
       } else if (this.password === '') {
-        console.log('密码不能为空');
+        this.$toast({
+          message: '密码不能为空',
+          type: 'error',
+        });
         this.disabled = true;
         this.btnBg = false;
       } else {
